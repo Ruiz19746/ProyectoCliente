@@ -14,7 +14,15 @@ var difH = Alto - H;
 var tope = difH / 2;
 var lado = difA / 2;
 var Opciones = "status=no, menubar=no, directories=no, location=no, toolbar=no, scrollbars=yes, resizable=no, width=" + A + ", height=" + H + ", top=" + tope + ", left=" + lado + "";
+var vRegistro;
 
 function registrarse() {
-    var vRegistro = window.open('https://ruiz19746.github.io/ProyectoCliente/registro.html', 'Registrarse', Opciones);
+    vRegistro = window.open('https://ruiz19746.github.io/ProyectoCliente/registro.html', 'Registrarse', Opciones);
+}
+
+function guardarDatos() {
+    debugger;
+    var nombreUsua = vRegistro.document.unirse.nombre.value;
+    var contraUsua = vRegistro.document.unirse.contra.value;
+    alert(nombreUsua + " " + contraUsua);
 }
