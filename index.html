@@ -2,8 +2,9 @@
 <html lang="es">
 
 <head>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://kit.fontawesome.com/cdb8326df2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <!-- <script src="https://kit.fontawesome.com/cdb8326df2.js" crossorigin="anonymous"></script> -->
     <script type="text/javascript" src="script.js"></script>
 </head>
 
@@ -11,24 +12,40 @@
     <header>
         <div class="parallax">
             <img src="img/logo.png">
+            <!-- <h1>WheelBoards' N&M</h1> -->
         </div>
-        <nav id="flex-container">
-            <div class="menu">
-                <ul>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
-            </div>
-            <div class="logo">
-                <a href="index.html"><img src="img/logo.png" alt="logo"></a>
-            </div>
-            <div class="menu2">
-                <ul>
-                    <li><a href="#">Cuenta</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
 
+    </header>
+    <nav id="flex-container">
+        <div class="menu">
+            <ul>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="logo">
+            <a href="index.html"><img src="img/icon.png" alt="logo"></a>
+        </div>
+        <div class="menu2">
+            <ul>
+                <li><a href="#">Cuenta</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="wrapper">
+        <div class="container">
+            <h2>Bienvenido a WheelBoards' N&M </h2>
+
+            <form class="form" name="sesion">
+                <input type="text" placeholder="Username" value="" name="usuario">
+                <input type="password" placeholder="Password" value="" name="contra">
+                <input type="button" class="button" value="Iniciar Sesión" onclick="mostrarDatos()"> - O -
+                <input type="button" class="button" value="Registrarse">
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>
+
+
+<!-- https://codepen.io/FormandoLaWeb/pen/gxOroq formato de formularo de registro y inicio de sesion -->
