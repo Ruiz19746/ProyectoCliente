@@ -1,0 +1,92 @@
+body {
+    font-size: 28px;
+}
+
+.parallax {
+    background-image: url('E:/2º DAW/Diseño de Interfaces Web/Proyecto CSS/DIW-CSS/img/parallax_2.jpg');
+    height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.parallax img {
+    max-width: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.logo img {
+    height: 60px;
+    width: 60px;
+}
+
+
+/* NAv */
+
+#flex-container {
+    display: flex;
+}
+
+#flex-container div {
+    width: 33.3%;
+    color: #FFF;
+    text-align: center;
+    font-size: 20px;
+    font-family: Arial;
+    /* background-color: cornflowerblue; */
+}
+
+#flex-container .menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    /* background-color: #333; */
+}
+
+#flex-container .menu li {
+    float: left;
+}
+
+#flex-container .menu li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#flex-container .menu2 ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+}
+
+#flex-container .menu2 li {
+    float: right;
+}
+
+#flex-container .menu2 li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#flex-container .logo {
+    color: rebeccapurple;
+    text-align: center;
+}
+
+
+/* ejemplo del nav que quiero hacer */
+
+
+/* https://codepen.io/RomanKl/pen/LWmvOK */
