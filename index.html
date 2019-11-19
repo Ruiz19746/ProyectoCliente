@@ -36,10 +36,10 @@
             <h2>Bienvenido a WheelBoards' N&M </h2>
 
             <form class="form" name="sesion">
-                <input type="text" placeholder="Username" value="" name="usuario">
-                <input type="password" placeholder="Password" value="" name="contra">
+                <input type="text" placeholder="Usuario*" value="" name="usuario" required>
+                <input type="password" placeholder="Contraseña*" value="" name="contra" required>
                 <input type="button" class="button" value="Iniciar Sesión" onclick="mostrarDatos()"> - O -
-                <input type="button" class="button" value="Registrarse">
+                <input type="button" class="button" value="Registrarse" onclick="registrarse()">
             </form>
         </div>
     </div>
@@ -49,3 +49,51 @@
 
 
 <!-- https://codepen.io/FormandoLaWeb/pen/gxOroq formato de formularo de registro y inicio de sesion -->
+
+<!-- <div id="registrarse">
+    <h1>Registrarse</h1>
+    <form action="#" method="post">
+        <div class="fila-arriba">
+            <div class="contenedor-input">
+                <label>
+                    Nombre <span class="req">*</span>
+                </label>
+                <input type="text" required >
+            </div>
+
+            <div class="contenedor-input">
+                <label>
+                    Apellido <span class="req">*</span>
+                </label>
+                <input type="text" required>
+            </div>
+        </div>
+        <div class="contenedor-input">
+            <label>
+                Usuario <span class="req">*</span>
+            </label>
+            <input type="text" required>
+        </div>
+        <div class="contenedor-input">
+                <label>
+                    Email <span class="req">*</span>
+                </label>
+            <input type="email" required>
+        </div>
+        <div class="contenedor-input">
+            <label>
+                Contraseña <span class="req">*</span>
+            </label>
+            <input type="password" required>
+        </div>
+
+        <div class="contenedor-input">
+            <label>
+                Repetir Contraseña <span class="req">*</span>
+            </label>
+            <input type="password" required>
+        </div>
+
+        <input type="submit" class="button button-block" value="Registrarse">
+    </form>
+</div> -->
