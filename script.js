@@ -22,7 +22,7 @@ function registrarse() {
 
 function guardarDatos() {
     debugger;
-    var nombreUsua = vRegistro.document.unirse.nombre.value;
-    var contraUsua = vRegistro.document.unirse.contra.value;
-    alert(nombreUsua + " " + contraUsua);
+    var nombre = vRegistro.document.unirse.nombre.value;
+    var contra = vRegistro.document.unirse.contra.value;
+    alert(nombre + " " + contra);
 }
