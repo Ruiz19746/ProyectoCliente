@@ -28,8 +28,40 @@ function guardarDatos() {
     debugger;
     nombre = document.unirse.nombre.value;
     contra = document.unirse.contra.value;
-    alert(nombre + contra)
-    vRegistro.close();
-
 }
-if (vRegistro.closed) { window.alert('este es el nombre del registrado' + nombre); }
+
+function calcularEdad(fcha) {
+    var fchActual = new Date();
+    var fchNacimiento = fcha;
+    var fecha = fchNacimiento.split("/")
+    var dia = fecha[0];
+    var mes = fecha[1];
+    var anyo = fecha[2];
+    var fNac = new Date(mes + "," + dia + "," + anyo);
+    var edad;
+
+    edad = fchActual.getUTCFullYear() - fNac.getFullYear();
+
+    return edad;
+}
+
+function socio(nombre, apellidos, nombreUsuario, email, contrasenya, fechaNacimiento) {
+    this.nombreUsua = nombre;
+    this.apellidosUsua = apellidos;
+    this.usuario = nombreUsuario;
+    this.emailUsua = email;
+    this.contraUsua = contrasenya;
+    this.edad = calcularEdad(fechaNacimiento);
+}
+var socios = new Array();
+numUsuario = 0;
+
+var miembro = new socio("Gustavo ", "Ponce Salazar ", "Gussy1820", "gussy@gmail.com", "gussy", "11/02/1998");
+socios[numUsuario] = miembro;
+miembro = new socio("Astrid", "Ruiz Zerda", "Lanie98", "lanie@gmial.com", "lanie", "27/12/1998");
+socios[numUsuario + 1] = miembro;
+
+function mostrarSocio() {
+    debugger;
+    alert(socios[0].edad);
+}
