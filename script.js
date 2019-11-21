@@ -19,10 +19,14 @@ var vRegistro;
 function registrarse() {
     vRegistro = window.open('https://ruiz19746.github.io/ProyectoCliente/registro.html', 'Registrarse', Opciones);
 }
+var nombre;
+var contra;
 
-// function guardarDatos() {
-//     debugger;
-//     var nombre = vRegistro.document.unirse.nombre.value;
-//     var contra = vRegistro.document.unirse.contra.value;
-//     alert(vRegistro.document.unirse.nombre.value + " " + vRegistro.document.unirse.contra.value);
-// }
+function guardarDatos() {
+    debugger;
+    nombre = vRegistro.document.unirse.nombre.value;
+    contra = vRegistro.document.unirse.contra.value;
+    vRegistro.close();
+
+}
+window.alert('este es el nombre del registrado' + nombre);
