@@ -24,9 +24,10 @@ var contra;
 
 function guardarDatos() {
     debugger;
-    nombre = vRegistro.document.unirse.nombre.value;
-    contra = vRegistro.document.unirse.contra.value;
+    nombre = document.unirse.nombre.value;
+    contra = document.unirse.contra.value;
+    alert(nombre + contra)
     vRegistro.close();
 
 }
-window.alert('este es el nombre del registrado' + nombre);
+if (vRegistro.closed) { window.alert('este es el nombre del registrado' + nombre); }
