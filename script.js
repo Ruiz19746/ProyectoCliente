@@ -14,6 +14,7 @@ var difH = Alto - H;
 var tope = difH / 2;
 var lado = difA / 2;
 var Opciones = "status=no, menubar=no, directories=no, location=no, toolbar=no, scrollbars=yes, resizable=no, width=" + A + ", height=" + H + ", top=" + tope + ", left=" + lado + "";
+
 var vRegistro;
 
 function registrarse() {
@@ -21,6 +22,7 @@ function registrarse() {
 }
 var nombre;
 var contra;
+vRegistro = vRegistro;
 
 function guardarDatos() {
     debugger;
