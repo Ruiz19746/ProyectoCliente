@@ -51,12 +51,13 @@ function guardarDatos() {
     if (contraNuevoUsua == repetirContraNuevoUsua) {
         debugger;
 
-        miembro = new socio(nomUsuaNuevoUsua, apellidoNuevoUsua, nomUsuaNuevoUsua, emailNuevoUsua, contraNuevoUsua, fechaNacNuevoUsua);
-        socios[socios.length] = miembro;
-        alert(socios[socios.length - 1].nombreUsua)
+        miembro = new socio(nombreNuevoUsua, apellidoNuevoUsua, nomUsuaNuevoUsua, emailNuevoUsua, contraNuevoUsua, fechaNacNuevoUsua);
+
     }
 }
-/**/
+socios[socios.length] = miembro;
+alert(socios[socios.length - 1].nombreUsua)
+    /**/
 function calcularEdad(fcha) {
     var fchActual = new Date();
     var fchNacimiento = fcha;
