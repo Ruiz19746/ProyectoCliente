@@ -1,35 +1,30 @@
 var socios = new Array();
-numUsuario = 0;
 
 var miembro = new socio("Gustavo ", "Ponce Salazar ", "Gussy1820", "gussy@gmail.com", "gussy", "11/02/1998");
-socios[numUsuario] = miembro;
+socios[0] = miembro;
 miembro = new socio("Astrid", "Ruiz Zerda", "Lanie98", "lanie@gmial.com", "lanie", "27/12/1998");
-socios[numUsuario++] = miembro;
+socios[1++] = miembro;
 
+// function mostrarDatos() {
+//     var nombreUsua = document.sesion.usuario.value;
+//     var contraUsua = document.sesion.contra.value;
+//     alert(nombreUsua + " " + contraUsua);
+// }
 
-
-
-function mostrarDatos() {
-    var nombreUsua = document.sesion.usuario.value;
-    var contraUsua = document.sesion.contra.value;
-    alert(nombreUsua + " " + contraUsua);
-}
-
-
-var Ancho = screen.width;
-var Alto = screen.height;
-var A = Ancho * 50 / 100;
-var H = Alto * 50 / 100;
-var difA = Ancho - A;
-var difH = Alto - H;
-var tope = difH / 2;
-var lado = difA / 2;
-var Opciones = "width=" + A + ", height=" + H + ", top=" + tope + ", left=" + lado + "";
+var anchoP = screen.width;
+var altoP = screen.height;
+var ancho = anchoP * 50 / 100;
+var alto = altoP * 50 / 100;
+var diferenciaAncho = anchoP - ancho;
+var diferenciaAlto = altoP - alto;
+var mitadAltura = diferenciaAlto / 2;
+var MitadAncho = diferenciaAncho / 2;
+var posPantalla = "width=" + ancho + ", height=" + alto + ", top=" + mitadAltura + ", left=" + MitadAncho + "";
 
 var vRegistro;
 
 function registrarse() {
-    vRegistro = window.open('https://ruiz19746.github.io/ProyectoCliente/registro.html', 'Registrarse', Opciones);
+    vRegistro = window.open('https://ruiz19746.github.io/ProyectoCliente/registro.html', 'Registrarse', posPantalla);
 }
 var nombreNuevoUsua;
 var apellidoNuevoUsua;
@@ -50,15 +45,16 @@ function guardarDatos() {
 
     if (contraNuevoUsua == repetirContraNuevoUsua) {
         debugger;
-
         miembro = new socio(nombreNuevoUsua, apellidoNuevoUsua, nomUsuaNuevoUsua, emailNuevoUsua, contraNuevoUsua, fechaNacNuevoUsua);
-
     }
 }
+
 socios[socios.length] = miembro;
 alert(socios[socios.length - 1].nombreUsua)
     /**/
+
 function calcularEdad(fcha) {
+
     var fchActual = new Date();
     var fchNacimiento = fcha;
     var fecha = fchNacimiento.split("/")
@@ -81,11 +77,6 @@ function socio(nombre, apellidos, nombreUsuario, email, contrasenya, fechaNacimi
     this.contraUsua = contrasenya;
     this.edad = calcularEdad(fechaNacimiento);
 }
-
-// function mostrarSocio() {
-//     debugger;
-//     alert(socios[0].edad);
-// }
 
 function inicioSesion() {
     var existe = false;
@@ -110,3 +101,6 @@ function inicioSesion() {
         alert("Ese usuario es incorrecto");
     }
 }
+
+
+// https://ruiz19746.github.io/ProyectoCliente/registro.html
