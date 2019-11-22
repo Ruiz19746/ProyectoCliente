@@ -4,7 +4,7 @@ numUsuario = 0;
 var miembro = new socio("Gustavo ", "Ponce Salazar ", "Gussy1820", "gussy@gmail.com", "gussy", "11/02/1998");
 socios[numUsuario] = miembro;
 miembro = new socio("Astrid", "Ruiz Zerda", "Lanie98", "lanie@gmial.com", "lanie", "27/12/1998");
-socios[numUsuario + 1] = miembro;
+socios[numUsuario++] = miembro;
 
 
 
@@ -14,7 +14,7 @@ function mostrarDatos() {
     var contraUsua = document.sesion.contra.value;
     alert(nombreUsua + " " + contraUsua);
 }
-debugger
+
 
 var Ancho = screen.width;
 var Alto = screen.height;
@@ -24,7 +24,7 @@ var difA = Ancho - A;
 var difH = Alto - H;
 var tope = difH / 2;
 var lado = difA / 2;
-var Opciones = "status=no, menubar=no, directories=no, location=no, toolbar=no, scrollbars=yes, resizable=no, width=" + A + ", height=" + H + ", top=" + tope + ", left=" + lado + "";
+var Opciones = "width=" + A + ", height=" + H + ", top=" + tope + ", left=" + lado + "";
 
 var vRegistro;
 
@@ -47,12 +47,14 @@ function guardarDatos() {
     emailNuevoUsua = document.unirse.email.value;
     contraNuevoUsua = document.unirse.contra.value;
     repetirContraNuevoUsua = document.unirse.contraRepetida.value;
-    debugger;
-    if (contraNuevoUsua == repetirContraNuevoUsua) {
-        miembro = new socio(nomUsuaNuevoUsua, apellidoNuevoUsua, nomUsuaNuevoUsua, emailNuevoUsua, contraNuevoUsua, fechaNacNuevoUsua);
-        socios[numUsuario + 1] = miembro;
-    }
 
+    if (contraNuevoUsua == repetirContraNuevoUsua) {
+        debugger;
+
+        miembro = new socio(nomUsuaNuevoUsua, apellidoNuevoUsua, nomUsuaNuevoUsua, emailNuevoUsua, contraNuevoUsua, fechaNacNuevoUsua);
+        socios[(numUsuario++)] = miembro;
+        alert("HE");
+    }
 }
 /**/
 function calcularEdad(fcha) {
