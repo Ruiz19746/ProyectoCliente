@@ -52,8 +52,8 @@ function guardarDatos() {
         debugger;
 
         miembro = new socio(nomUsuaNuevoUsua, apellidoNuevoUsua, nomUsuaNuevoUsua, emailNuevoUsua, contraNuevoUsua, fechaNacNuevoUsua);
-        socios[(numUsuario++)] = miembro;
-        alert("HE");
+        socios[socios.length] = miembro;
+        alert(socios[socios.length - 1].nombreUsua)
     }
 }
 /**/
