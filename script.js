@@ -1,3 +1,14 @@
+var socios = new Array();
+numUsuario = 0;
+
+var miembro = new socio("Gustavo ", "Ponce Salazar ", "Gussy1820", "gussy@gmail.com", "gussy", "11/02/1998");
+socios[numUsuario] = miembro;
+miembro = new socio("Astrid", "Ruiz Zerda", "Lanie98", "lanie@gmial.com", "lanie", "27/12/1998");
+socios[numUsuario + 1] = miembro;
+
+
+
+
 function mostrarDatos() {
     var nombreUsua = document.sesion.usuario.value;
     var contraUsua = document.sesion.contra.value;
@@ -20,16 +31,30 @@ var vRegistro;
 function registrarse() {
     vRegistro = window.open('https://ruiz19746.github.io/ProyectoCliente/registro.html', 'Registrarse', Opciones);
 }
-var nombre;
-var contra;
-vRegistro = vRegistro;
-
+var nombreNuevoUsua;
+var apellidoNuevoUsua;
+var nomUsuaNuevoUsua;
+var fechaNacNuevoUsua;
+var emailNuevoUsua;
+var contraNuevoUsua;
+var repetirContraNuevoUsua;
+/* */
 function guardarDatos() {
+    nombreNuevoUsua = document.unirse.nombre.value;
+    apellidoNuevoUsua = document.unirse.apellido.value;
+    nomUsuaNuevoUsua = document.unirse.usuario.value;
+    fechaNacNuevoUsua = document.unirse.fchNac.value;
+    emailNuevoUsua = document.unirse.email.value;
+    contraNuevoUsua = document.unirse.contra.value;
+    repetirContraNuevoUsua = document.unirse.contraRepetida.value;
     debugger;
-    nombre = document.unirse.nombre.value;
-    contra = document.unirse.contra.value;
-}
+    if (contraNuevoUsua == repetirContraNuevoUsua) {
+        miembro = new socio(nomUsuaNuevoUsua, apellidoNuevoUsua, nomUsuaNuevoUsua, emailNuevoUsua, contraNuevoUsua, fechaNacNuevoUsua);
+        socios[numUsuario + 1] = miembro;
+    }
 
+}
+/**/
 function calcularEdad(fcha) {
     var fchActual = new Date();
     var fchNacimiento = fcha;
@@ -53,15 +78,32 @@ function socio(nombre, apellidos, nombreUsuario, email, contrasenya, fechaNacimi
     this.contraUsua = contrasenya;
     this.edad = calcularEdad(fechaNacimiento);
 }
-var socios = new Array();
-numUsuario = 0;
 
-var miembro = new socio("Gustavo ", "Ponce Salazar ", "Gussy1820", "gussy@gmail.com", "gussy", "11/02/1998");
-socios[numUsuario] = miembro;
-miembro = new socio("Astrid", "Ruiz Zerda", "Lanie98", "lanie@gmial.com", "lanie", "27/12/1998");
-socios[numUsuario + 1] = miembro;
+// function mostrarSocio() {
+//     debugger;
+//     alert(socios[0].edad);
+// }
 
-function mostrarSocio() {
+function inicioSesion() {
+    var existe = false;
+    var pos = 0;
+
     debugger;
-    alert(socios[0].edad);
+
+    for (var i = 0; i < socios.length; i++) {
+        if (socios[i].usuario == document.sesion.usuario.value) {
+            existe = true;
+            pos = i;
+        }
+    }
+
+    if (existe) {
+        if (socios[pos].contraUsua == document.sesion.contra.value) {
+            alert("BIENVENIDO");
+        } else {
+            alert("La contraseña es incorrecta");
+        }
+    } else {
+        alert("Ese usuario es incorrecto");
+    }
 }
